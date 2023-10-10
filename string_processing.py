@@ -1,4 +1,4 @@
-bad_chars = [';', ':', '!', "*", "?", ",", "-", "_"]
+bad_chars = [';', ':', '!', "*", "?", ",", "-", "_", "."]
 
 def tokenize(sentence):
     for j in bad_chars:
