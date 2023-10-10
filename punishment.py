@@ -7,14 +7,3 @@ def do_punishment(first_part, second_part, nb_lines):
     phrase = f"{first_part} {second_part}"
     phrase = ' '.join([phrase]*nb_lines)
     return phrase
-
-
-
-
-
-    text1 = f"{first_part} {second_part}"
-
-    text = ' '.join([text1] * nb_lines)
-
-    return text
-    
