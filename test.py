@@ -1,6 +1,4 @@
-import flex_function
+import recipes
 
 if __name__ == '__main__':
-    print(flex_function.create_person('Kevin', 'Boulin', 34, 'male', size=1.83, job='taxidermist'))
-    print(flex_function.create_person('Kevin', 'Boulin', age=34, gender='male', size=1.83, job='taxidermist'))
-    print(flex_function.create_person('Kevin', 'Boulin', 34, 'male'))
+    print(recipes.create_recipe('Pâtes au beurre', 30, ['pâtes', 'beurre']))
