@@ -7,6 +7,6 @@ def do_punishment(first_part, second_part, nb_lines):
     if phrase.endswith('.')==True:
         phrase += ' '
     phrase *= nb_lines
-    phrase.strip()
+    phrase.rstrip()
     return phrase
     
