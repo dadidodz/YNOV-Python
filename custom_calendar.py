@@ -9,7 +9,7 @@ semaine = {
 }
 
 def day_from_number(day_number):
-    if day_number == None:
+    if day_number == None or 0<day_number<8:
         return None
     listKeys = semaine.keys()
     if 0<day_number<=len(listKeys):
