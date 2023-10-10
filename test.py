@@ -1,7 +1,8 @@
-import numerical_operations
+import shopping
 
 if __name__ == '__main__':
-    print(numerical_operations.modulo(10, 3))
-    print(numerical_operations.divide(10, 3))
-    print(numerical_operations.divide(10, 0))
-    print(numerical_operations.integer_division(10, 3))
+    list_with_milk = ['tomatoes', 'pastas', 'milk', 'salt']
+    list_without_milk = ['tomatoes', 'pastas', 'salt']
+
+    print(shopping.remember_the_milk(list_with_milk))
+    print(shopping.remember_the_milk(list_without_milk))
