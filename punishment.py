@@ -1,11 +1,20 @@
 def do_punishment(first_part, second_part, nb_lines):
     first_part = first_part.strip()
     second_part = second_part.strip()
-    phrase = first_part + ' ' + second_part
-    if phrase.endswith('.')==False:
-        phrase+='.'
-    phrase += ' '
-    phrase *= nb_lines
-   
+    if second_part.endswith('.')==False:
+        second_part += '.'
+
+    phrase = f"{first_part} {second_part}"
+    phrase = ' '.join([phrase]*nb_lines)
     return phrase
+
+
+
+
+
+    text1 = f"{first_part} {second_part}"
+
+    text = ' '.join([text1] * nb_lines)
+
+    return text
     
