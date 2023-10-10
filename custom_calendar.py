@@ -13,7 +13,7 @@ def day_from_number(day_number):
         return None
     listKeys = semaine.keys()
     if 0<day_number<=len(listKeys):
-        return semaine[day_number]
+        return semaine[int(day_number)]
     else:
         return None
 
