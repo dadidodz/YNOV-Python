@@ -1,5 +1,6 @@
-import string_processing
+import flex_function
 
 if __name__ == '__main__':
-    my_sentence = "Dites, on n'attend pas votre soeur ?"
-    print(string_processing.tokenize(my_sentence))
+    print(flex_function.create_person('Kevin', 'Boulin', 34, 'male', size=1.83, job='taxidermist'))
+    print(flex_function.create_person('Kevin', 'Boulin', age=34, gender='male', size=1.83, job='taxidermist'))
+    print(flex_function.create_person('Kevin', 'Boulin', 34, 'male'))
