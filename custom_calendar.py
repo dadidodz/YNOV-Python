@@ -26,5 +26,5 @@ def day_to_number(day):
         return None
     else:
         position = val_list.index(day)
-        if 0<position<8:
+        if 0<=position<8:
             return (key_list[position])
