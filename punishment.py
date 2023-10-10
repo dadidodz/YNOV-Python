@@ -6,5 +6,7 @@ def do_punishment(first_part, second_part, nb_lines):
         phrase+="."
     if phrase.endswith(".")==True:
         phrase += " "
-    return phrase*nb_lines
+    phrase *= nb_lines
+    phrase.strip()
+    return phrase
     
