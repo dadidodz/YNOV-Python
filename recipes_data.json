@@ -1,37 +1,37 @@
 [
-    {
-      "title": "clafouti aux cerises",
-      "ingredients": [
-        "600 g de cerises",
-        "- 40 g de beurre semi-sel + 20 g pour le moule",
-        "- 4 oeufs",
-        "- 1 sachet de sucre vanillé",
-        "-2cl de kirsh",
-        "- 1 pincée de sel",
-        "- sucre glace"
-      ],
-      "persons": 8
-    },
-    {
-      "title": "Rochers aux coco",
-      "ingredients": [
-        "2 oeufs",
-        "150g de noix de coco rapée",
-        "55g de sucre en poudre"
-      ],
-      "persons": 2
-    },
-    {
-      "title": "Blésotto de poireaux-jambon au Cookéo",
-      "ingredients": [
-        "650g de blancs de poireaux (frais ou surgelés)",
-        "2 cc d'huile de tournesol",
-        "230g de blé cru (type Ebly)",
-        "150g de dés de jambon",
-        "500ml d'eau",
-        "1 bouillon cube",
-        "3cs de crème fraîche à 15% de matière grasse"
-      ],
-      "persons": 5
-    }
-  ]
+  {
+    "title": "Clafouti aux cerises",
+    "ingredients": [
+      "600 g de cerises",
+      "- 40 g de beurre semi-sel + 20 g pour le moule",
+      "- 4 oeufs",
+      "- 1 sachet de sucre vanillé",
+      "-2cl de kirsh",
+      "- 1 pincée de sel",
+      "- sucre glace"
+    ],
+    "persons": 8
+  },
+  {
+    "title": "Rochers aux coco",
+    "ingredients": [
+      "2 oeufs",
+      "150g de noix de coco rapée",
+      "55g de sucre en poudre"
+    ],
+    "persons": 2
+  },
+  {
+    "title": "Blésotto de poireaux-jambon au Cookéo",
+    "ingredients": [
+      "650g de blancs de poireaux (frais ou surgelés)",
+      "2 cc d'huile de tournesol",
+      "230g de blé cru (type Ebly)",
+      "150g de dés de jambon",
+      "500ml d'eau",
+      "1 bouillon cube",
+      "3cs de crème fraîche à 15% de matière grasse"
+    ],
+    "persons": 5
+  }
+]
