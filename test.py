@@ -1,9 +1,4 @@
-import datetime as dt
-from menu import save_menu
+import recipes
 
 if __name__ == '__main__':
-    recipes = [
-        (dt.date(2022, 6, 1), 'bananes flambées'), 
-        (dt.date(2022, 6, 2), 'avocat au thon'),
-    ]
-    save_menu(recipes)
+    print(recipes.create_recipe_v2('Tarte aux figues', 4, 'pâte feuilleté', 'figues', moment='dessert', season='summer'))
