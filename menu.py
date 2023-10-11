@@ -11,6 +11,9 @@ def build_menu(recipes: list[dict], start_date: dt.date) -> list[tuple[dt.date, 
     return listOfTuple
 
 def save_menu(meals: list[tuple[dt.date, str]]):
-    file = open("menu.txt", "w", encoding='utf-8')
-    for i in meals:
-        file.write(str(i))
+    with open("menu.txt", "w", encoding='utf-8') as file:
+        for meal in meals:
+            date, dish = meal
+            formatted_date = date.strftime("%A %d %B %Y")
+            menu_entry = f"{formatted_date}: {dish}\n"
+            file.write(menu_entry)

@@ -1,1 +1,2 @@
-(datetime.date(2022, 6, 1), 'bananes flambées')(datetime.date(2022, 6, 2), 'avocat au thon')
+Wednesday 01 June 2022: bananes flambées
+Thursday 02 June 2022: avocat au thon
