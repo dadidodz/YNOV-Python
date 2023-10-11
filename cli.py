@@ -6,7 +6,6 @@ from filter_recipes import filter_recipes
 from menu import build_menu
 from datetime_utils import parse_time
 from menu import save_menu
-# from datetime_utils import format_date
 
 parser = argparse.ArgumentParser(description="Create a menu from recipes")
 parser.add_argument("--start", "-s", required=True, help="Start date (format: DD/MM/YYYY)")
@@ -20,10 +19,9 @@ sorted_recipes = sort_recipes(recipes, 'title')
 
 filtered_recipes = filter_recipes(sorted_recipes, args.max_persons)
 
-a = parse_time(args.start)
+format_date = parse_time(args.start)
 
-menu_content = build_menu(filtered_recipes, a)
-#print(menu_content)
+menu_content = build_menu(filtered_recipes, format_date)
 
 save_menu(menu_content)
 
