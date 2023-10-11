@@ -1,0 +1,1 @@
+(datetime.date(2022, 6, 1), 'bananes flambées')(datetime.date(2022, 6, 2), 'avocat au thon')
