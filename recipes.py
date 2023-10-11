@@ -4,7 +4,7 @@ def create_recipe(nameb, personsb, ingredientsb):
         'persons': personsb, 
         'ingredients': ingredientsb,
     }
-    if len(recipe['ingredients'])>=150:
+    if len(recipe['ingredients'])>149:
         raise ValueError("Title is too long")
     if recipe['persons']==False or recipe['persons']>50:
         raise ValueError("Invalid persons number")
