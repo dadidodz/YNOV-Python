@@ -24,5 +24,5 @@ def create_recipe_v2(title, persons, *ingredients, **tags):
     if recipe['persons']==False or recipe['persons']>50:
         raise ValueError("Invalid persons number")
     if not len(recipe['ingredients']):
-        raise ValueError("Ingredient list cannot be empty")
+        raise ValueError("This recipe has no ingredients")
     return recipe
