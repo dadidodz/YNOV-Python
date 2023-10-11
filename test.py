@@ -1,4 +1,12 @@
-import recipes
+import datetime as dt
+from decorator import with_current_date
+
+@with_current_date
+def log_message(message: str, current_date: dt.date):
+    # this is an example function
+    # you can imagine any other functions
+    return f'{current_date}: {message}'
 
 if __name__ == '__main__':
-    print(recipes.create_recipe_v2('Tarte aux figues', 4, 'pâte feuilleté', 'figues', moment='dessert', season='summer'))
+    print(log_message('hello'))
+    print(log_message('world'))
