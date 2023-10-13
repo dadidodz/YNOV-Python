@@ -1,7 +1,6 @@
-from base_spaceships import Spaceship
+from base_spaceships import Battleship, Fighter
 
 if __name__ == '__main__':
-    uss_enterprise = Spaceship(attack=100, defense=1500)
-    uss_enterprise.take_damages(2000)
-    print(uss_enterprise.defense)
-    print(uss_enterprise.is_alive)
+    x_wing = Fighter(attack=200, defense=800)
+    print(x_wing.attack)
+    print(x_wing.defense)

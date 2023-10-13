@@ -33,3 +33,16 @@ class Spaceship:
         if self.defense<=0:
             self.defense=0
             self.is_alive = False
+
+class Battleship(Spaceship):
+    """
+    Inherit class from Spaceship
+    """
+    pass
+
+
+class Fighter(Spaceship):
+    """
+    Inherit class from Spaceship
+    """
+    pass
