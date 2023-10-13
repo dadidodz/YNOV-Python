@@ -1,9 +1,16 @@
 from spaceships import Interceptor, Bomber, Destroyer
 
 if __name__ == '__main__':
-    tie_interceptor1 = Interceptor()
-    tie_interceptor2 = Interceptor()
-    print(tie_interceptor1.attack)
-    print(tie_interceptor2.defense)
-    tie_interceptor1.fire_on(tie_interceptor2)
-    print(tie_interceptor2.defense)
+    tie_interceptor = Interceptor()
+    y_wing = Bomber()
+
+    print(tie_interceptor.attack)
+    print(y_wing.defense)
+
+    tie_interceptor.fire_on(y_wing)
+    print(y_wing.defense)
+
+    venator = Destroyer()
+    print(venator.defense)
+    tie_interceptor.fire_on(venator)
+    print(venator.defense)
