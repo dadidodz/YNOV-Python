@@ -1,6 +1,5 @@
 import argparse
 import json
-import datetime as dt
 from sort_list import sort_recipes
 from filter_recipes import filter_recipes
 from menu import build_menu
