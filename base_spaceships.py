@@ -27,6 +27,7 @@ class Spaceship:
         """
         if damage<0:
             raise ValueError("Negative damage")
+        print("ERREUR ICI?")
         self.defense -= damage
         if self.defense<=0:
             self.defense=0
