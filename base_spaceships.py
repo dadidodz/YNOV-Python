@@ -1,6 +1,6 @@
 class Spaceship:
     """
-    This is the documentation for Spaceship.
+    Spaceship class
 
     Attribut : 
         is_alive(bool):Statut of the spaceship, dead of alive, default value is True.
@@ -9,7 +9,6 @@ class Spaceship:
 
     def __init__(self, attack, defense):
         """
-        This is the documentation for the __init__ method.
         Initialize the attributs attack and defense with the value of the parameters.
 
         Parameters:
@@ -21,11 +20,10 @@ class Spaceship:
 
     def take_damages(self, damage):
         """
-        This is the documentation for the takes_damage method.
         Subtract the damage passed in parameters to the ship defense.
 
         Parameters:
-        damage (int):The value of the damage the ship takes.
+        damage (int):The value of the damage the ship takes. Can't be negative.
         """
         if damage<0:
             raise ValueError("Negative damage")
@@ -33,6 +31,15 @@ class Spaceship:
         if self.defense<=0:
             self.defense=0
             self.is_alive = False
+    
+    def fire_on(self, spaceship):
+        """
+        Deals damages to the spaceship passed in parameters.
+
+        Parameters:
+        spaceship (Spaceship):Targetted spaceship.
+        """
+        spaceship.take_damages(self.attack)
 
 class Battleship(Spaceship):
     """
