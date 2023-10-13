@@ -1,16 +1,14 @@
-from spaceships import Interceptor, Bomber, Destroyer
+from spaceships import BattleshipKiller, FighterKiller, Interceptor, Bomber, Destroyer
 
 if __name__ == '__main__':
-    tie_interceptor = Interceptor()
-    y_wing = Bomber()
+    killer = BattleshipKiller()
+    print(killer.attack)
 
-    print(tie_interceptor.attack)
-    print(y_wing.defense)
+    bomber = Bomber()
+    print(bomber.attack)
 
-    tie_interceptor.fire_on(y_wing)
-    print(y_wing.defense)
+    destroyer = Destroyer()
+    print(destroyer.attack)
 
-    venator = Destroyer()
-    print(venator.defense)
-    tie_interceptor.fire_on(venator)
-    print(venator.defense)
+    fighter = FighterKiller()
+    print(fighter.attack)

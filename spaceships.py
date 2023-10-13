@@ -8,6 +8,9 @@ class Cruiser (Battleship):
 
 
 class BattleshipKiller(Spaceship):
+    def __init__(self, attack=10, defense=5000):
+        super().__init__(attack, defense)
+
     def fire_on(self, spaceship):
         if isinstance(spaceship, Battleship): 
             spaceship.take_damages(self.attack*2)
@@ -22,8 +25,10 @@ class Destroyer (BattleshipKiller, Battleship):
     def __init__(self, attack=650, defense=5000):
         super().__init__(attack, defense)
 
-
 class FighterKiller(Spaceship):
+    def __init__(self, attack=20, defense=5000):
+        super().__init__(attack, defense)
+
     def fire_on(self, spaceship):
         if isinstance(spaceship, Fighter):
             spaceship.take_damages(self.attack*2)
