@@ -42,7 +42,7 @@ class Destroyer (Battleship):
         super().__init__(attack, defense)
 
     def fire_on(self, spaceship):
-        if isinstance(spaceship, Battleship):
+        if isinstance(spaceship, Battleship): 
             spaceship.take_damages(self.attack*2)
         else:
             spaceship.take_damages(self.attack)
