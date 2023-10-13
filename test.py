@@ -1,7 +1,7 @@
 from base_spaceships import Spaceship
 
 if __name__ == '__main__':
-    uscss_nostromo = Spaceship(attack=100, defense=1500)
-    print(uscss_nostromo.is_alive)
-    print(uscss_nostromo.attack)
-    print(uscss_nostromo.defense)
+    uss_enterprise = Spaceship(attack=100, defense=1500)
+    uss_enterprise.take_damages(2000)
+    print(uss_enterprise.defense)
+    print(uss_enterprise.is_alive)
