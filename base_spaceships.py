@@ -18,7 +18,7 @@ class Spaceship:
         self.attack = attack
         self.defense = defense
 
-    def take_damages(self, damage: int) -> None:
+    def take_damages(self, damage):
         """
         Subtract the damage passed in parameters to the ship defense.
 
