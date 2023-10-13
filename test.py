@@ -1,13 +1,16 @@
-from base_spaceships import Spaceship
+from spaceships import Interceptor, Bomber, Destroyer
 
 if __name__ == '__main__':
-    tie_fighter = Spaceship(50, 300)
-    millennium_falcon = Spaceship(350, 900)
-    
-    tie_fighter.fire_on(millennium_falcon)
-    print(millennium_falcon.defense)
-    print(millennium_falcon.is_alive)
-    
-    millennium_falcon.fire_on(tie_fighter)
-    print(tie_fighter.defense)
-    print(tie_fighter.is_alive)
+    tie_interceptor = Interceptor()
+    y_wing = Bomber()
+
+    print(tie_interceptor.attack)
+    print(y_wing.defense)
+
+    tie_interceptor.fire_on(y_wing)
+    print(y_wing.defense)
+
+    venator = Destroyer()
+    print(venator.defense)
+    tie_interceptor.fire_on(venator)
+    print(venator.defense)
