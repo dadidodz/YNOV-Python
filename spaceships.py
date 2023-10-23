@@ -1,16 +1,16 @@
 from base_spaceships import Battleship, Fighter, Spaceship
 
 class FighterKiller(Spaceship):
-    def fire_on(self, target : Spaceship):
-        if isinstance(target, Fighter):
+    def fire_on(self, target: Spaceship):
+        if target.__class__.__base__.__name__ == "Fighter" or target.__class__.__name__ == "Fighter":
             target.take_damages(self.attack * 2)
         else:
             target.take_damages(self.attack)
         return target
 
 class BattleshipKiller(Spaceship):
-    def fire_on(self, target : Spaceship):
-        if isinstance(target, Battleship): 
+    def fire_on(self, target: Spaceship):
+        if target.__class__.__base__.__name__ == "Battleship" or target.__class__.__name__ == "Battleship":
             target.take_damages(self.attack * 2)
         else:
             target.take_damages(self.attack)
