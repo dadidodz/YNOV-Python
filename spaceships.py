@@ -1,20 +1,20 @@
 from base_spaceships import Battleship, Fighter, Spaceship
 
 class FighterKiller(Spaceship):
-    def fire_on(self, spaceship):
-        if isinstance(spaceship, Fighter):
-            dmg = self.attack*2
+    def fire_on(self, target : Spaceship):
+        if isinstance(target, Fighter):
+            target.take_damages(self.attack * 2)
         else:
-            dmg = self.attack
-        spaceship.take_damages(dmg)
+            target.take_damages(self.attack)
+        return target
 
 class BattleshipKiller(Spaceship):
-    def fire_on(self, spaceship):
-        if isinstance(spaceship, Battleship): 
-            dmg = self.attack*2
+    def fire_on(self, target : Spaceship):
+        if isinstance(target, Battleship): 
+            target.take_damages(self.attack * 2)
         else:
-            dmg = self.attack
-        spaceship.take_damages(dmg)
+            target.take_damages(self.attack)
+        return target
 
 class Cruiser (Battleship):
     def __init__(self, attack=800, defense=3000) -> None:
