@@ -16,7 +16,6 @@ class BattleshipKiller():
         else:
             dmg = self.attack
         spaceship.take_damages(dmg)
-        print("bk")
 
 class Cruiser (Battleship):
     def __init__(self, attack=800, defense=3000):
