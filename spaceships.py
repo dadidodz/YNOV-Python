@@ -8,7 +8,6 @@ class FighterKiller:
             dmg = self.attack
         spaceship.take_damages(dmg)
 
-
 class BattleshipKiller:
     def fire_on(self, spaceship):
         if isinstance(spaceship, Battleship): 
@@ -36,4 +35,3 @@ class Interceptor(FighterKiller, Fighter):
 class Frigate (FighterKiller, Battleship):
     def __init__(self, attack=500, defense=2500):
         super().__init__(attack, defense)
-
