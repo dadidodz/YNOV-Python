@@ -39,7 +39,7 @@ class Fleet:
 
     @property
     def alive_battleships(self):
-        return len(self.get_alive_battleships())
+        return self.get_alive_battleships()
 
     @property
     def report(self):
