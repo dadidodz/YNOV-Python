@@ -17,21 +17,21 @@ class BattleshipKiller:
         spaceship.take_damages(dmg)
 
 class Cruiser (Battleship):
-    def __init__(self, attack=800, defense=3000):
+    def __init__(self, attack=800, defense=3000) -> None:
         super().__init__(attack, defense)
 
 class Bomber(BattleshipKiller, Fighter):
-    def __init__(self, attack=150, defense=2000):
+    def __init__(self, attack=150, defense=2000) -> None:
         super().__init__(attack, defense)
 
 class Destroyer (BattleshipKiller, Battleship):
-    def __init__(self, attack=650, defense=5000):
+    def __init__(self, attack=650, defense=5000) -> None:
         super().__init__(attack, defense)
 
 class Interceptor(FighterKiller, Fighter):
-    def __init__(self, attack=180, defense=1000):
+    def __init__(self, attack=180, defense=1000) -> None:
         super().__init__(attack, defense)
 
 class Frigate (FighterKiller, Battleship):
-    def __init__(self, attack=500, defense=2500):
+    def __init__(self, attack=500, defense=2500) -> None:
         super().__init__(attack, defense)
