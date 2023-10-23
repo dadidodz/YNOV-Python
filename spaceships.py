@@ -1,6 +1,6 @@
 from base_spaceships import Battleship, Fighter, Spaceship
 
-class FighterKiller:
+class FighterKiller(Spaceship):
     def fire_on(self, spaceship):
         if isinstance(spaceship, Fighter):
             dmg = self.attack*2
@@ -8,7 +8,7 @@ class FighterKiller:
             dmg = self.attack
         spaceship.take_damages(dmg)
 
-class BattleshipKiller:
+class BattleshipKiller(Spaceship):
     def fire_on(self, spaceship):
         if isinstance(spaceship, Battleship): 
             dmg = self.attack*2
