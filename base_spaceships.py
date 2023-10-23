@@ -7,7 +7,7 @@ class Spaceship:
     """
     is_alive = True
 
-    def __init__(self, attack, defense):
+    def __init__(self, attack=100, defense=100):
         """
         Initialize the attributs attack and defense with the value of the parameters.
 
@@ -43,13 +43,14 @@ class Spaceship:
 
 class Battleship(Spaceship):
     """
-    Inherit class from Spaceship
+    A class representing a battleship, inheriting from Spaceship.
     """
-    pass
-
-
+    def __init__(self, attack, defense):
+        super().__init__(attack, defense)
+        
 class Fighter(Spaceship):
     """
-    Inherit class from Spaceship
+    A class representing a fighter, inheriting from Spaceship.
     """
-    pass
+    def __init__(self, attack, defense):
+        super().__init__(attack, defense)
