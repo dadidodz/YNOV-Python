@@ -1,10 +1,6 @@
-from base_spaceships import Spaceship
-from requirements import Requirements
-from spaceships import Interceptor, Frigate, Bomber, Destroyer, Cruiser
+from ship_types import ShipType
 
 if __name__ == '__main__':
-    print(Interceptor.requirements.metal)
-    print(Bomber.requirements.crystal)
-    print(Cruiser.requirements.metal)
-
-    
+    print(ShipType.CRUISER)
+    print(ShipType.CRUISER.name)
+    print(ShipType.CRUISER.value)
