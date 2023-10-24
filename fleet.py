@@ -1,3 +1,4 @@
+from typing import override
 from base_spaceships import Battleship, Fighter
 
 class Fleet:
@@ -6,6 +7,14 @@ class Fleet:
         self.name = name
         self.ships = ships
 
+    @override
+    def __add__(self, other):
+        if isinstance(other, list):
+            for element in other:
+                self.ships.append(element)
+        else:
+            self.ships.append(other)
+            
     def get_all_alive_ships(self):
         return [ship for ship in self.ships if ship.is_alive]
     
