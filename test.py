@@ -1,20 +1,21 @@
 import random
-
 from battle_simulator import Simulator
 from spaceships import Interceptor, Frigate, Bomber, Destroyer
+from fleet import Fleet
 
 if __name__ == '__main__':
     random.seed(100)
 
-    attackers = [Interceptor(), Interceptor(), Frigate()]
-    defenders = [Bomber(), Interceptor(), Destroyer()]
+    attackers = Fleet('Empire', [Interceptor(), Interceptor(), Frigate()])
+    defenders = Fleet('Rebels', [Bomber(), Interceptor(), Destroyer()])
 
-    simulator = Simulator()
+    simulator = Simulator(attackers, defenders)
 
-    simulator._simulate_fight(attackers, defenders)
-    print(attackers[0].is_alive)
-    print(attackers[1].is_alive)
-    print(attackers[2].is_alive)
-    print(defenders[0].is_alive)
-    print(defenders[1].is_alive)
-    print(defenders[2].is_alive)
+    simulator.fight()
+    print(attackers.ships[0].is_alive)
+    print(attackers.ships[1].is_alive)
+    print(attackers.ships[2].is_alive)
+    print(defenders.ships[0].is_alive)
+    print(defenders.ships[1].is_alive)
+    print(defenders.ships[2].is_alive)
+    print(simulator.get_report())
