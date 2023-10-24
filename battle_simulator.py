@@ -14,4 +14,7 @@ class Simulator:
         else:
             for ship in attacker_ships_list:
                 if ship.is_alive:
-                    ship.fire_on(defenser_ships_list[random.randint(0, len(defenser_ships_list)-1)])
+                    self._duel_fight(ship, defenser_ships_list[random.randint(0, len(defenser_ships_list)-1)])
+
+
+

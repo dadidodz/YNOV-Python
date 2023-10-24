@@ -1,5 +1,4 @@
 import datetime as dt
-from datetime_utils import format_date
 
 def build_menu(recipes: list[str], start_date: dt.date) -> list[tuple[dt.date, str]]:
     listOfTuple = []

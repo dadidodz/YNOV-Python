@@ -1,6 +1,5 @@
 from operator import itemgetter
 
-
 def sort_recipes(recipes, by):
     if by!='title' and by!='persons':
         raise ValueError("Expected title or persons as parameter")
