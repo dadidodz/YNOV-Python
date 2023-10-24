@@ -1,15 +1,19 @@
-from fleet import Fleet
-from spaceships import Frigate, Cruiser, Interceptor
+from battle_simulator import Simulator
+from spaceships import Interceptor, Frigate, Bomber
 
 if __name__ == '__main__':
-    uss_kelvin = Frigate()
-    star_fleet = Fleet('Starfleet', [uss_kelvin, Cruiser(), Interceptor(), Cruiser()])
-    print(star_fleet.name)
-    print(len(star_fleet.ships))
+    tie_fighter = Interceptor()
+    y_wing = Bomber()
 
-    uss_kelvin.is_alive = False
-    print(len(star_fleet.get_alive_battleships()))
-    print(star_fleet.get_report())
+    simulator = Simulator()
 
-    print(star_fleet.report == star_fleet.get_report())
-    print(star_fleet.alive_fighters == star_fleet.get_alive_fighters())
+    simulator._duel_fight(tie_fighter, y_wing)
+    print(tie_fighter.defense)
+    print(y_wing.defense)
+
+    tentative_iv = Frigate()
+    tie_fighter = Interceptor()
+
+    simulator._duel_fight(tentative_iv, tie_fighter)
+    print(tentative_iv.defense)
+    print(tie_fighter.is_alive)

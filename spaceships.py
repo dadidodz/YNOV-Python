@@ -20,18 +20,18 @@ class Cruiser (Battleship):
     def __init__(self, attack=800, defense=3000) -> None:
         super().__init__(attack, defense)
 
-class Bomber(BattleshipKiller, Fighter):
+class Bomber(Fighter, BattleshipKiller):
     def __init__(self, attack=150, defense=2000) -> None:
         super().__init__(attack, defense)
 
-class Destroyer (BattleshipKiller, Battleship):
+class Destroyer (Battleship, BattleshipKiller):
     def __init__(self, attack=650, defense=5000) -> None:
         super().__init__(attack, defense)
 
-class Interceptor(FighterKiller, Fighter):
+class Interceptor(Fighter, FighterKiller):
     def __init__(self, attack=180, defense=1000) -> None:
         super().__init__(attack, defense)
 
-class Frigate (FighterKiller, Battleship):
+class Frigate (Battleship, FighterKiller):
     def __init__(self, attack=500, defense=2500) -> None:
         super().__init__(attack, defense)
