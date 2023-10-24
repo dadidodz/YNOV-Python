@@ -3,6 +3,11 @@ from base_spaceships import Spaceship
 from fleet import Fleet
 
 class Simulator:
+
+    def __init__ (self, attacker_fleet :Fleet, defender_fleet: Fleet) -> None:
+        self.attacket_fleet = attacker_fleet
+        self.defender_fleet = defender_fleet
+
     @staticmethod
     def _duel_fight(attack_spaceship : Spaceship, defense_spaceship : Spaceship) -> None:
         attack_spaceship.fire_on(defense_spaceship)
@@ -16,10 +21,6 @@ class Simulator:
             for ship in attacker_ships_list:
                 if ship.is_alive:
                     self._duel_fight(ship, defenser_ships_list[random.randint(0, len(defenser_ships_list)-1)])
-
-    def __init__ (self, attacker_fleet :Fleet, defender_fleet: Fleet) -> None:
-        self.attacket_fleet = attacker_fleet
-        self.defender_fleet = defender_fleet
 
     def fight(self):
         self._simulate_fight(self.attacket_fleet.alive_battleships, self.defender_fleet.alive_battleships)
