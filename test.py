@@ -1,17 +1,20 @@
-from fleet import Fleet
+from dock import SpaceDock
 from spaceships import Interceptor, Frigate
 
 if __name__ == '__main__':
-    fighter_1 = Interceptor()
-    fighter_2 = Interceptor()
-    fighter_3 = Interceptor()
-    tentive_iv = Frigate()
+    dock = SpaceDock()
+    
 
-    alpha_fleet = Fleet('alpha group', [fighter_1])
-    print(len(alpha_fleet.ships))
+    default_fleet = dock['default'] #(dock.fleets['default'].ships)
+    print(default_fleet.ships)
+    # print(default_fleet.name)
+    new_fleet = dock['this fleet does not exist yet']
+    print(new_fleet.name, new_fleet.ships) #new_fleet.name = dock.fleets['this fleet does not exist yet'].name
 
-    alpha_fleet + fighter_2
-    print(len(alpha_fleet.ships))
+    dock['my new fleet'] = [Interceptor(), Interceptor(), Frigate()]
+    print(dock['my new fleet'].name, len(dock['my new fleet'].ships))
 
-    alpha_fleet + [fighter_3, tentive_iv]
-    print(len(alpha_fleet.ships))
+    
+    
+    # del dock['this fleet does not exist yet']
+    # print(dock)
