@@ -7,12 +7,28 @@ class SpaceDock:
         self.fleets = {'default': Fleet('default', [])}
 
     def __getitem__(self, key):
-        if key in self.fleets:
+        if key in self.fleets.keys():
             return self.fleets[key]
         else:
-            self[key]=''
+            self[key]=None
             return self.fleets[key]
     
     def __setitem__(self, key, newvalue):
-        # self.fleets[key] = key
-        self.fleets = {key : Fleet(key, [])}
+        if newvalue == None:
+            self.fleets[key] = Fleet(key, [])
+        elif not key in self.fleets.keys():
+            self.fleets[key] = Fleet(key, [])
+            self.fleets[key]+(newvalue)
+
+    def __delitem__(self, key):
+        self.fleets.pop(key)
+
+    def __str__(self):
+        string = ''
+        for fleet in self.fleets:
+            string += str(self.fleets[fleet].name) + ': ' + str(len(self.fleets[fleet].ships)) + ' ships, '
+
+        string = string.strip()
+        string = string[:-1]
+        return string
+        
