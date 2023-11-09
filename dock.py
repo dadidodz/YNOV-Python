@@ -21,7 +21,8 @@ class SpaceDock:
             self.fleets[key]+(newvalue)
 
     def __delitem__(self, key):
-        self.fleets.pop(key)
+        if key in self.fleets.keys():
+            self.fleets.pop(key)
 
     def __str__(self):
         string = ''
