@@ -23,6 +23,8 @@ class SpaceDock:
     def __delitem__(self, key):
         if key in self.fleets.keys():
             self.fleets.pop(key)
+        else:
+            raise ValueError()
 
     def __str__(self):
         string = ''
