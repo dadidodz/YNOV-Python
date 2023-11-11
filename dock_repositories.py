@@ -17,7 +17,7 @@ class SpaceDockFileRepository:
     def load(self) -> SpaceDock:
         if not os.path.exists(self.name):
             spacedock = SpaceDockFileRepository(self.name)
-            spacedock.save()
+            spacedock.save(self.name)
             return spacedock
         else:
             picklefile = open(self.name, "rb")
