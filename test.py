@@ -1,15 +1,12 @@
+from space_yard import SpaceYard
+from spaceships import Interceptor
 from dock import SpaceDock
-from dock_repositories import SpaceDockFileRepository
-from spaceships import Interceptor, Frigate
 
 if __name__ == '__main__':
     dock = SpaceDock()
-    dock['default'] = [Interceptor(), Interceptor()]
-    dock['defenders'] = [Frigate(), Frigate(), Interceptor()]
+    # yard = SpaceYard(dock)
+    
+    # yard.build_ship('default', Interceptor, 3, 4000, 600)
     print(dock)
     
-    dock_repo = SpaceDockFileRepository('fleets.pickle')
-    dock_repo.save(dock)
-    
-    retrieved_dock = dock_repo.load()
-    print(retrieved_dock)
+    # yard.build_ship('default', Interceptor, 3, 2000, 600)
