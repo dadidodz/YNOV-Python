@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 from dock import SpaceDock
 import pickle, os
 
-class SpaceDockRepository:
+class SpaceDockRepository(ABC):
     
     @abstractmethod
     def save(self, dock: SpaceDock) -> None:
