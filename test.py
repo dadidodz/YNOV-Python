@@ -1,7 +1,9 @@
-from ship_types import get_ship_class_by_name, ShipType
+from dock import SpaceDock
+from dock_repositories import SpaceDockInMemoryRepository, SpaceDockRepository, SpaceDockFileRepository
 
 if __name__ == '__main__':
-    print(ShipType.INTERCEPTOR)
-    # print(get_ship_class_by_name('interceptor'))
-    print(get_ship_class_by_name('interceptor') == ShipType.INTERCEPTOR)
-    print(get_ship_class_by_name('intERCEptoR') == ShipType.INTERCEPTOR)
+    dock = SpaceDock()
+    dock_repo = SpaceDockInMemoryRepository()
+
+    dock_repo.save(dock)
+    print(dock_repo.load() == dock)
