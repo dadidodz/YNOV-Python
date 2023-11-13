@@ -1,5 +1,5 @@
 from dock import SpaceDock
-from spaceships import Spaceship, Interceptor
+from spaceships import Spaceship
 from exceptions import ResourceError
 
 class SpaceYard:
@@ -12,9 +12,6 @@ class SpaceYard:
             for i in range(quantity):
                 self.spacedock[fleet_name]+(ship_class())
         else:
-            print(quantity)
-            print(ship_class.requirements.metal*quantity)
-            print(available_metal)
             string = 'Not enough '
             if ship_class.requirements.metal*quantity > available_metal:
                 string += 'metal'
