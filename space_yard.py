@@ -1,5 +1,6 @@
 from dock import SpaceDock
 from spaceships import Spaceship, Interceptor
+from exceptions import ResourceError
 
 class SpaceYard:
 
@@ -7,10 +8,19 @@ class SpaceYard:
         self.spacedock = spacedock
 
     def build_ship(self, fleet_name:str, ship_class:Spaceship, quantity:int, available_metal:int, available_crystal:int):
-        a = ship_class.requirements.metal
-        b = ship_class.requirements.crystal
-        if a < available_metal and b < available_crystal:
-            self.spacedock.fleets[fleet_name] = [Interceptor(), Interceptor(),Interceptor()]
-        
-        if self.__class__.__base__.__name__ == fleet_name or self.__class__.__name__ == fleet_name:
-            pass
+        if ship_class.requirements.metal*quantity <= available_metal and ship_class.requirements.crystal*quantity <= available_crystal:
+            for i in range(quantity):
+                self.spacedock[fleet_name]+(ship_class())
+        else:
+            print(quantity)
+            print(ship_class.requirements.metal*quantity)
+            print(available_metal)
+            string = 'Not enough '
+            if ship_class.requirements.metal*quantity > available_metal:
+                string += 'metal'
+            else:
+                string += 'crystal'
+            string += ' to build ' + str(quantity) + ' ' + type(ship_class()).__name__
+            if quantity > 1:
+                string+= 's'
+            raise ResourceError(string)

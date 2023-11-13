@@ -30,7 +30,6 @@ class SpaceDock:
         string = ''
         for fleet in self.fleets:
             string += str(self.fleets[fleet].name) + ': ' + str(len(self.fleets[fleet].ships)) + ' ships, '
-
         string = string.strip()
         string = string[:-1]
         return string
