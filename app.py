@@ -14,6 +14,6 @@ def init_dock_repository():
         case 'in_memory' :
             return SpaceDockInMemoryRepository()
         case 'file':
-            return SpaceDockFileRepository()
+            return SpaceDockFileRepository(value)
         case _:
             raise ValueError('Repository ' + value + ' does not exist')
