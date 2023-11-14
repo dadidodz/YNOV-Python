@@ -2,7 +2,7 @@ import os
 from dock_repositories import SpaceDockInMemoryRepository, SpaceDockFileRepository
 
 def init_dock_repository():
-    value = os.environ['DOCK_REPOSITORY']
+    value = os.environ['DOCK_REPOSITORY'].lower()
     # print(type(value))
     # if value=='in_memory' :
     #     print('1')
