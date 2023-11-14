@@ -11,8 +11,6 @@ class ShipType(Enum):
 
 def get_ship_class_by_name(ship_name:str):
     ship_name = ship_name.upper()
-    # ship_name = ship_name.lower()
-    # ship_name = ship_name.capitalize()
     if ship_name == ShipType.CRUISER.name:
         return ShipType.CRUISER
     elif ship_name == ShipType.BOMBER.name:

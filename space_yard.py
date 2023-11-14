@@ -12,12 +12,12 @@ class SpaceYard:
             for i in range(quantity):
                 self.spacedock[fleet_name]+(ship_class())
         else:
-            string = 'Not enough '
+            msgError = 'Not enough '
             if ship_class.requirements.metal*quantity > available_metal:
-                string += 'metal'
+                msgError += 'metal'
             else:
-                string += 'crystal'
-            string += ' to build ' + str(quantity) + ' ' + type(ship_class()).__name__
+                msgError += 'crystal'
+            msgError += ' to build ' + str(quantity) + ' ' + type(ship_class()).__name__
             if quantity > 1:
-                string+= 's'
-            raise ResourceError(string)
+                msgError+= 's'
+            raise ResourceError(msgError)

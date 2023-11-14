@@ -1,9 +1,9 @@
-from dock import SpaceDock
-from dock_repositories import SpaceDockInMemoryRepository, SpaceDockRepository, SpaceDockFileRepository
+import os
+from app import init_dock_repository
 
 if __name__ == '__main__':
-    dock = SpaceDock()
-    dock_repo = SpaceDockInMemoryRepository()
+    os.environ['DOCK_REPOSITORY'] = 'in_memory'
+    print(type(init_dock_repository()))
 
-    dock_repo.save(dock)
-    print(dock_repo.load() == dock)
+    os.environ['DOCK_REPOSITORY'] = 'incorrect'
+    init_dock_repository()
